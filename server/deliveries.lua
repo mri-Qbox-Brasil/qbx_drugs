@@ -50,7 +50,7 @@ RegisterNetEvent('qb-drugs:server:successDelivery', function(deliveryData, inTim
     local item = Config.DeliveryItems[deliveryData.item].item
     local itemAmount = deliveryData.amount
     local payout = deliveryData.itemData.payout * itemAmount
-    local copsOnline = QBCore.Functions.GetDutyCount('police')
+    local copsOnline = QBCore.Functions.GetDutyCountType('leo')
     local curRep = Player.PlayerData.metadata["dealerrep"]
     local invItem = Player.Functions.GetItemByName(item)
     if inTime then
