@@ -1,30 +1,29 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'QB-Drugs'
+description 'QBX_Drugs'
+repository 'https://github.com/Qbox-project/qbx_drugs'
 version '1.0.0'
 
 shared_scripts {
-    '@qbx_core/import.lua',
-    'config.lua',
+    '@ox_lib/init.lua',
     '@qbx_core/shared/locale.lua',
     'locales/en.lua',
     'locales/*.lua',
-    '@ox_lib/init.lua'
+    'config.lua',
 }
 
-modules {
-	'qbx_core:playerdata',
-}
 client_scripts{
+    '@qbx_core/modules/playerdata.lua',
     'client/deliveries.lua',
-    'client/cornerselling.lua'
+    'client/cornerselling.lua',
 }
 
 server_scripts{
     '@oxmysql/lib/MySQL.lua',
     'server/deliveries.lua',
-    'server/cornerselling.lua'
+    'server/cornerselling.lua',
 }
 
 lua54 'yes'
+use_experimental_fxv2_oal 'yes'
