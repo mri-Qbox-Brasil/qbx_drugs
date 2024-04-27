@@ -66,7 +66,7 @@ local function knockDoorAnim(home)
                 locale('info.fred_knock_message', QBX.PlayerData.charinfo.firstname)
             }
         })
-        lib.showTextUI(locale('info.other_dealers_button'), { position = 'left-center' })
+        lib.showTextUI(locale('info.other_dealers_button'), { position = 'right-center' })
         AwaitingInput()
     else
         TriggerServerEvent('InteractSound_SV:PlayOnSource', 'knock_door', 0.2)
@@ -318,10 +318,10 @@ function InitZones()
         dealerCombo:onPlayerInOut(function(isPointInside)
             if isPointInside then
                 if not dealerIsHome then
-                    lib.showTextUI(locale('info.knock_button'), { position = 'left-center' })
+                    lib.showTextUI(locale('info.knock_button'), { position = 'right-center' })
                     AwaitingInput()
                 elseif dealerIsHome then
-                    lib.showTextUI(locale('info.other_dealers_button'), { position = 'left-center' })
+                    lib.showTextUI(locale('info.other_dealers_button'), { position = 'right-center' })
                     AwaitingInput()
                 end
             else
@@ -392,7 +392,7 @@ RegisterNetEvent('qb-drugs:client:setLocation', function(locationData)
             onEnter = function()
                 inDeliveryZone = true
                 lib.showTextUI(locale('info.deliver_items_button', activeDelivery.amount, exports.ox_inventory:Items()[activeDelivery.itemData.item].label), {
-                    position = 'left-center'
+                    position = 'right-center'
                 })
                 CreateThread(function()
                     while inDeliveryZone do
