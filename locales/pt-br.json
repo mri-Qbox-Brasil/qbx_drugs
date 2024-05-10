@@ -1,6 +1,6 @@
 {
     "error": {
-        "has_no_drugs": "Você não está carregando nenhum droga com você",
+        "has_no_drugs": "Você não está carregando nenhuma droga com você",
         "not_enough_police": "Não há policiais suficientes de plantão (%s requerido)",
         "no_drugs_left": "Não há mais drogas para vender",
         "too_far_away": "Você se afastou demais",
