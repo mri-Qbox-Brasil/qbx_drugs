@@ -100,9 +100,11 @@ return {
         'weed_ak47',
         'crack_baggy',
         'cokebaggy',
-        'meth'
+        'meth',
+        'joint',
+        'cocaine'
     },
-    useMarkedBills = false,
+    useMarkedBills = true,
     deliveryRepGain = 1,
     deliveryRepLoss = 1,
     policeDeliveryModifier = 2,

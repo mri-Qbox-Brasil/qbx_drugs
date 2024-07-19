@@ -1,5 +1,5 @@
 return {
-    useTarget = GetConvar('UseTarget', 'false') == 'true',
+    useTarget = true,
     policeCallChance = 15,
     successChance = 50,
     scamChance = 25,
@@ -38,7 +38,15 @@ return {
             min = 18,
             max = 37,
         },
+        ['cocaine'] = {
+            min = 18,
+            max = 37,
+        },
         ['meth'] = {
+            min = 18,
+            max = 40,
+        },
+        ['joint'] = {
             min = 18,
             max = 40,
         },
