@@ -13,7 +13,11 @@ RegisterNetEvent('qb-drugs:server:randomPoliceAlert', function()
     local player = exports.qbx_core:GetPlayer(source)
     if not player then return end
     if config.policeCallChance >= math.random(1, 100) then
-        TriggerEvent('police:server:policeAlert', locale('info.possible_drug_dealing'), nil, player.PlayerData.source)
+        if GetResourceState('ps-dispatch') == 'started' then
+            exports['ps-dispatch']:DrugSale()
+        else
+            TriggerEvent('police:server:policeAlert', locale('info.possible_drug_dealing'), nil, player.PlayerData.source)
+        end
     end
 end)
 
